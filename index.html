@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Grid landing page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: hsl(228, 99%, 58%);
+        color: hsl(224, 100%, 95%);
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        max-width: 100vw;
+      }
+      .hero-text1 {
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+      .navigation {
+        border-bottom: 1px solid hsl(224, 100%, 95%);
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .hero {
+        padding: 40px 20px;
+        border-bottom: 1px solid hsl(224, 100%, 95%);
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+      }
+      .div-stat {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 100px;
+        border-bottom: 1px solid hsl(224, 100%, 95%);
+      }
+      .upper-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .footer {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+      }
+      .menu {
+        text-align: center;
+        display: none;
+        padding: 40px 0px;
+        border-bottom: 1px solid hsl(224, 100%, 95%);
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .menu-text {
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+      .active {
+        background-color: hsl(220, 100%, 64%);
+      }
+      .dot {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: hsl(224, 100%, 95%);
+      }
+      .left {
+        display: flex;
+        column-gap: 10px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @media (min-width: 600px) {
+        .main-container {
+          display: flex;
+          flex-direction: column;
+        }
+        .section3 {
+          flex: 3;
+          display: flex;
+          flex-direction: column;
+        }
+        .section {
+          display: flex;
+        }
+        .hero {
+          flex: 1;
+          justify-content: center;
+        }
+        .stats {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          flex: 1;
+        }
+        .div-stat {
+          border-left: 1px solid hsl(224, 100%, 95%);
+        }
+        .section2 {
+          display: flex;
+          flex-direction: row-reverse;
+        }
+        .menu {
+          flex: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <nav class="navigation">
+        <div class="left">
+          <div class="dot"></div>
+          Bridge Collective
+        </div>
+        <img
+          class="menu-btn"
+          src="./assets/images/icon-menu.svg"
+          alt="menu image"
+        />
+      </nav>
+      <div class="section2">
+        <div class="menu">
+          <p class="menu-text">About</p>
+          <p class="menu-text">Our Work</p>
+          <p class="menu-text">Partners</p>
+          <p class="menu-text">Anual Report</p>
+          <p class="menu-text">Donate</p>
+        </div>
+        <div class="section3">
+          <div class="section">
+            <div class="hero">
+              <p class="hero-text1">A classroom for every child.</p>
+              <p class="hero-text2">
+                We fund the schools, train the teachers, and measure what works
+                — so every child we reach today becomes a graduate tomorrow.
+              </p>
+            </div>
+
+            <div class="stats">
+              <div class="div-stat">
+                <div class="upper-section">
+                  <img
+                    class="icon"
+                    src="./assets/images/icon-sparkle.svg"
+                    alt=""
+                  />
+                  <p class="stat">2.4M</p>
+                </div>
+                <div class="lower-section">
+                  <p class="lower-text1">Students reached Across</p>
+                  <p class="lower-text2">31 countries since 2011.</p>
+                </div>
+              </div>
+              <div class="div-stat">
+                <div class="upper-section">
+                  <img
+                    class="icon"
+                    src="./assets/images/icon-plus.svg"
+                    alt=""
+                  />
+                  <p class="stat">1,284</p>
+                </div>
+                <div class="lower-section">
+                  <p class="lower-text1">Schools partnered</p>
+                  <p class="lower-text2">
+                    In 14 countries, from Kenya to Guatemala.
+                  </p>
+                </div>
+              </div>
+              <div class="div-stat">
+                <div class="upper-section">
+                  <img
+                    class="icon"
+                    src="./assets/images/icon-arrow-right.svg"
+                    alt=""
+                  />
+                  <p class="stat">38K</p>
+                </div>
+                <div class="lower-section">
+                  <p class="lower-text1">Teachers trained</p>
+                  <p class="lower-text2">
+                    Equipped with modern tools and methodology.
+                  </p>
+                </div>
+              </div>
+              <div class="div-stat">
+                <div class="upper-section">
+                  <img
+                    class="icon"
+                    src="./assets/images/icon-trending-up.svg"
+                    alt=""
+                  />
+                  <p class="stat">3.1×</p>
+                </div>
+                <div class="lower-section">
+                  <p class="lower-text1">Graduation lift</p>
+                  <p class="lower-text2">
+                    Partner schools outperform national averages 3x.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer class="footer">
+            <p>© 2026 Bridge Collective</p>
+            <p>Registered charity 12345678</p>
+            <div class="attribution">
+              Challenge by
+              <a href="https://www.frontendmentor.io?ref=challenge"
+                >Frontend Mentor</a
+              >. Coded by <a href="#">tanaka vanhuvaone</a>.
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let menuBtn = document.querySelector(".menu-btn");
+      let menu = document.querySelector(".menu");
+      let nav = document.querySelector(".navigation");
+
+      menuBtn.addEventListener("click", () => {
+        if (menuBtn.getAttribute("src") === "./assets/images/icon-menu.svg") {
+          menuBtn.setAttribute("src", "./assets/images/icon-close.svg");
+        } else {
+          menuBtn.setAttribute("src", "./assets/images/icon-menu.svg");
+        }
+        menu.classList.toggle("menu-toggle");
+        nav.classList.toggle("active");
+        menu.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
